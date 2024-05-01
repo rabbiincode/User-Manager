@@ -1,0 +1,20 @@
+<ng-container>
+  <app-header></app-header>
+  <div class="details">
+    <div class="navigate">
+      <span>User Id: {{searchValue}}</span>
+      <button (click)="back()"><mat-icon>navigate_before</mat-icon> Back</button>
+    </div>
+    @if (loading) {
+      <img src="/assets/gif/loading.gif" alt="loading..." class="loader"/>
+    } @else {
+      @if (error) {
+        <p>An error occurred. Please try again</p>
+      } @else if (!error && user.length == 0) {
+        <p>User does not exist</p>
+      } @else {
+        <app-user-card [user]="user" [details]="true"></app-user-card>
+      }
+    }
+  </div>
+</ng-container>

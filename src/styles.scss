@@ -1,1 +1,89 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face{
+  font-family: "Aeonik Regular";
+  src: url("https://db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.eot");
+  src: url("https://db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/8f2a9d487bbbc60974cd132fc3a63862.svg#Aeonik Regular")format("svg");
+}
+
+html, body{
+  background: #ffff;
+  color: #000;
+  min-height: 100%;
+  max-width: 100vw;
+  font-size: clamp(9px, 15px, 19px);
+  font-weight: normal;
+  line-height: normal;
+  font-style: normal;
+  font-family: 'Aeonik Regular', sans-serif;
+}
+
+.loader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+/* width */
+::-webkit-scrollbar{
+  width: 0.8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track{
+  width: 0.8rem !important;
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb{
+  background: #000;
+}
+
+// To handle page responsiveness
+@media (max-width: 768px){
+  html, body{
+    font-size: clamp(7.5px, 14px, 17.5px);
+  }
+}
+
+@media (max-width: 640px){
+  html, body{
+    font-size: clamp(6.5px, 13px, 16.5px);
+  }
+}
+
+@media (max-width: 375px){
+  html, body{
+    font-size: clamp(5.5px, 10.5px, 14.5px);
+  }
+}
+
+@media (max-width: 225px){
+  html, body{
+    font-size: clamp(3.5px, 6.5px, 10.5px);
+  }
+}
+
+@media (max-width: 150px){
+  html, body{
+    font-size: clamp(2.2px, 4.7px, 7.7px);
+  }
+}
+
+@media (max-width: 110px){
+  html, body{
+    font-size: clamp(1.3px, 2.7px, 4.3px);
+  }
+}
+
+@media (max-width: 60px){
+  html, body{
+    font-size: clamp(0.9px, 1.7px, 3.7px);
+  }
+}

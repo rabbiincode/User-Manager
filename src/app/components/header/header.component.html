@@ -1,0 +1,17 @@
+<ng-container>
+  <nav class="header">
+    <span>UserManager</span>
+    <form *ngIf="search" #searchForm="ngForm" (ngSubmit)="searchUser()" class="input">
+      <img src="/assets/images/search.png" alt="img" class="search"/>
+      <input placeholder="Search" type="text" name="search" [(ngModel)]="searchValue"/>
+    </form>
+    <div class="icons">
+      <img src="/assets/images/search.png" alt="img" (click)="searchInput()" matTooltip="Search" class="search"/>
+      <img src="/assets/images/plus.png" alt="img" matTooltip="Add"/>
+      <img src="/assets/images/message.png" alt="img" matTooltip="Message"/>
+      <img src="/assets/images/bell.png" alt="img" matTooltip="Bell"/>
+    </div>
+    <mat-icon (click)="toggleSidebar()" class="menu">menu</mat-icon>
+  </nav>
+  <app-sidebar (getImageByCategory)="getCategoryImage($event)" (search)="searchInput()" [ngClass]="showSidebar ? 'showSidebar' : 'hideSidebar'"></app-sidebar>
+</ng-container>

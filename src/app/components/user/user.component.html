@@ -1,0 +1,11 @@
+<div>
+  @if (loading) {
+    <img src="/assets/gif/loading.gif" alt="loading..." class="loader"/>
+  } @else{
+    <app-user-card [user]="users"></app-user-card>
+    <div class="navigate">
+      <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+  }
+</div>

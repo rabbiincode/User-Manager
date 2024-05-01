@@ -1,0 +1,19 @@
+<div class="users">
+  @for (card of user; track $index) {
+    <div (click)="getUserDetails(card.id)" [ngClass]="details ? 'details' : ''" class="user">
+      <img [src]="card.avatar" alt="img"/>
+      <div>
+        @if (details) {
+          <p class="name">First Name: {{card.first_name}}</p>
+          <p class="name">Last Name: {{card.last_name}}</p>
+          <p class="mail">Email Address: <span>{{card.email}}</span></p>
+        } @else {
+          <p class="name">{{card.first_name}} {{card.last_name}}</p>
+          @if (show) {
+            <p class="mail">Contact &#64; <span>{{card.email}}</span></p>
+          }
+        }
+      </div>
+    </div>
+  }
+</div>

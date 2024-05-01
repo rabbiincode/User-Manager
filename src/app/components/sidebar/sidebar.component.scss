@@ -1,0 +1,50 @@
+.sidebar{
+  position: fixed;
+  top: 0;
+  background: #CECECE;
+  height: 100vh;
+  min-width: 16.75rem;
+  max-width: 16.75rem;
+  gap: 1.5rem;
+  padding: 3rem 0;
+}
+
+.content > p{
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 2rem 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.icon{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+}
+.icon:hover{
+  background: #b4b3b3;
+}
+
+.icon > span{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.icon > img{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.circle{
+  background: #fff;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px){
+  .sidebar{
+    top: 5.5rem;
+  }
+}

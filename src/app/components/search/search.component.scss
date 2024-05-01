@@ -1,0 +1,50 @@
+.search{
+  margin-left: 16.75rem;
+  padding: 2rem;
+}
+
+.search > p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f73232;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.navigate{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.navigate > span{
+  color: #30f530;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.navigate > button{
+  background: transparent;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navigate > button:hover{
+  opacity: 0.8;
+}
+
+@media (max-width: 768px){
+  .search{
+    margin-left: 0;
+  }
+}

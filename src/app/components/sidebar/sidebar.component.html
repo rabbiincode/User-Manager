@@ -1,0 +1,13 @@
+<div class="sidebar">
+  <div class="content">
+    <p>Users</p>
+    <div (click)="getCategoryImages('all')" [routerLink]="['/']" class="icon">
+      <mat-icon>person</mat-icon>
+      <span>All Users</span>
+    </div>
+    <div (click)="searchInput()" class="icon">
+      <img src="/assets/images/search.png" alt="img" class="search"/>
+      <span>Search</span>
+    </div>
+  </div>
+</div>
