@@ -2,10 +2,21 @@
   @if (loading) {
     <img src="/assets/gif/loading.gif" alt="loading..." class="loader"/>
   } @else{
-    <app-user-card [user]="users"></app-user-card>
-    <div class="navigate">
-      <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
-      <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
-    </div>
+    @if (users.length != 0) {
+      <app-user-card [user]="users"></app-user-card>
+      <div class="navigate">
+        <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+        <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+      </div>
+    } @else {
+      @if (error) {
+        <p>An error occurred. Please try again</p>
+      } @else if (!error && users.length == 0) {
+        <p>User does not exist</p>
+      } @else {
+        <app-user-card [user]="users"></app-user-card>
+      }
+      <p>Try again...</p>
+    }
   }
 </div>

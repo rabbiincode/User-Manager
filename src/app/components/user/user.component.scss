@@ -6,7 +6,7 @@
 }
 
 .navigate > button{
-  background: #e0dddd;
+  background: #CECECE;
   font-size: 1.2rem;
   border: none;
   outline: none;
@@ -17,4 +17,14 @@
 
 .navigate > button:disabled{
   cursor: auto;
+}
+
+p{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #f73232;
+  font-size: 1.5rem;
+  font-weight: 500;
 }

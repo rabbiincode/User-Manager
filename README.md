@@ -8,6 +8,8 @@ A Web Application for user management
 - Get All Users
 - Search User
 - Get user details
+- Cache Implementation
+- loading spinner on api request
 
 
 ## Tech Stack
